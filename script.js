@@ -1,5 +1,11 @@
 let dernierCaractere = '';
 
+        // Fonction qui vérifie si le caractère est un opérateur
+        function estOperateur(caractere) {
+            const operateurs = ['+', '-', '*', '/'];
+            return operateurs.includes(caractere);
+        }
+        // Fonction qui affiche le résultat
         function val(resultat) {
             if (estOperateur(resultat)) {
                 const derniereValeur = form.fenetre.value;
@@ -18,14 +24,12 @@ let dernierCaractere = '';
             }
             dernierCaractere = resultat;
         }
-        function estOperateur(caractere) {
-            const operateurs = ['+', '-', '*', '/'];
-            return operateurs.includes(caractere);
-        }
 
+        // Fonction qui supprime le dernier caractère
         function suppr() {
             form.fenetre.value = "";
         }
+        // Fonction qui calcule le résultat
         function calcule() {
             if (form.fenetre.value == "") {
             } else {
